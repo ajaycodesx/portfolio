@@ -1,0 +1,60 @@
+import { Experience } from '@/types';
+
+export const experience: Experience[] = [
+  {
+    id: '1',
+    company: 'MarketBytes',
+    role: 'Lead Developer',
+    duration: '2024 - Present',
+    responsibilities: [
+      'Leading full-stack development for multiple production-grade web applications and client systems.',
+      'Architecting and developing scalable backend systems using Django REST Framework and Python.',
+      'Building modern frontend dashboards and responsive user portals using React and Next.js.',
+      'Managing deployment workflows on Ubuntu VPS hosting using Nginx, Gunicorn, Docker, and CyberPanel/AAPanel.',
+      'Handling multiple concurrent client projects including CMS, CRM, invoicing utilities, and secure validation systems.',
+      'Designing robust database architectures, API structures, and coordinating multi-tenant production deployments.',
+    ],
+    technologies: [
+      'Django REST Framework',
+      'React.js',
+      'Next.js',
+      'Python FastAPI',
+      'Node.js',
+      'Vue.js',
+      'Docker',
+      'VPS Infrastructure Hosting',
+      'CI/CD',
+      'AI/ML Integration',
+    ],
+  },
+  {
+    id: '2',
+    company: 'PixelBoho',
+    role: 'Senior Full Stack Developer',
+    duration: '8 Months',
+    responsibilities: [
+      'Worked on full-stack web applications and client projects with dynamic focus on performance and UI/UX improvements.',
+      'Developed highly-responsive frontend interfaces and component workflows using React.js and Tailwind CSS.',
+      'Built and maintained robust backend API endpoints using Django and Node.js.',
+      'Integrated third-party APIs, authentication gateways, and payment collection systems.',
+      'Improved application rendering performance, search index behaviors, and clean code architecture.',
+      'Collaborated closely with design leads and backend engineers to accelerate operational feature delivery.',
+    ],
+    technologies: ['React.js', 'Django Framework', 'JavaScript', 'HTML5', 'CSS3'],
+  },
+  {
+    id: '3',
+    company: 'Ezer Developers',
+    role: 'Junior Full Stack Developer',
+    duration: '4 Months',
+    responsibilities: [
+      'Started professional journey working on web development projects and learning industry-standard production workflows.',
+      'Developed basic web applications and landing systems using HTML5, CSS3, and JavaScript.',
+      'Assisted senior engineers in React frontend development tasks and reusable components building.',
+      'Worked on interactive bug fixing, layout repairs, and UI responsiveness improvements.',
+      'Learned the basics of REST API integrations, local environments management, and deployment essentials.',
+      'Gained valuable hands-on client-side experience working on live active business systems.',
+    ],
+    technologies: ['React.js', 'Django Framework', 'JavaScript', 'HTML5', 'CSS3'],
+  },
+];
