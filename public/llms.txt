@@ -1,0 +1,72 @@
+# Ajay Renjith - Full Stack Developer & Backend Architect
+
+A professional full-stack software engineer specializing in scaling backend architectures, Django REST Framework, React/Next.js frontend systems, and secure VPS hosting environments.
+
+## Information & Links
+* **Full Name**: Ajay Renjith
+* **Title**: Senior Full Stack Developer | Django & React Specialist | Backend Architect
+* **Live Portfolio**: https://portfolio-tau-dusky-45.vercel.app
+* **GitHub**: https://github.com/ajaycodesx
+* **LinkedIn**: https://linkedin.com/in/ajayrenjith
+* **Instagram**: https://instagram.com/_aj_aii._
+* **Email**: mailto:ajayrenjith.dev@gmail.com
+* **Location**: Kerala, India
+
+---
+
+## Technical Stack & Competencies
+
+### Backend Engineering
+* **Languages**: Python, JavaScript/TypeScript, SQL
+* **Frameworks**: Django, Django REST Framework, Python FastAPI, Node.js
+* **Database**: PostgreSQL, SQLite, MySQL, Database Architectures & Design
+* **Integrations**: RESTful APIs, Secure Authentication Gateways, Stripe/Payment Gates, AI/ML Integrations
+
+### Frontend Engineering
+* **Core**: TypeScript, JavaScript, HTML5, CSS3
+* **Frameworks**: React.js, Next.js (App Router, Turbopack), Vue.js, Tailwind CSS
+* **Aesthetics**: Glassmorphism, 3D WebGL (Three.js, React Three Fiber), Framer Motion, Responsive Grid Layouts
+
+### DevOps, Deployment & Infrastructure
+* **Operating Systems**: Ubuntu / Linux Server Administration
+* **Containerization**: Docker, Docker Compose
+* **Web Servers**: Nginx, Gunicorn, Reverse Proxies
+* **Control Panels**: CyberPanel, AAPanel
+* **CI/CD**: Automation Pipelines, GitHub Actions
+* **Hosting**: Virtual Private Servers (VPS), Vercel
+
+---
+
+## Professional Journey
+
+### Lead Developer at MarketBytes (2024 - Present)
+* Leading full-stack development for multiple production-grade web applications, B2B SaaS portals, and invoicing utilities.
+* Architected scalable backend architectures with Django REST Framework.
+* Programmed responsive, high-performance dashboards using React/Next.js.
+* Managed complete deployment workflows on Ubuntu VPS platforms using Nginx, Gunicorn, Docker, CyberPanel, and AAPanel.
+
+### Senior Full Stack Developer at PixelBoho (8 Months)
+* Engineered full-stack web applications and custom CRM/CMS portals.
+* Focused on UI/UX optimization, responsive design stacks, and frontend performance indices.
+* Configured backend endpoints, API authentication gateways, and local-to-cloud deployments.
+
+### Junior Full Stack Developer at Ezer Developers (4 Months)
+* Developed clean landing pages and client-side modules using HTML5, CSS3, and JavaScript.
+* Assisted senior engineers in React component architecture and local test executions.
+* Learned REST APIs, command line git, and local production pipelines.
+
+---
+
+## Featured Projects
+
+### 1. B2B SaaS Marketplace & CRM
+* High-scale SaaS marketplace integrated with dynamic pricing, quotation engines, and customer management portals.
+* **Stack**: Next.js, React.js, Django REST Framework, PostgreSQL, Docker, AAPanel.
+
+### 2. Custom Business CMS & Invoicing System
+* Advanced business administration utility with secure invoice generation, PDF reporting, role-based controls, and client databases.
+* **Stack**: React, Django, PostgreSQL, VPS Hosting, CyberPanel.
+
+### 3. Smart Email Marketing & Automation Hub
+* Automation system for managing concurrent email queues, custom campaign schedules, template parsing, and delivery analytics.
+* **Stack**: Python, FastAPI, React, PostgreSQL, Docker Compose, Redis, Celery.

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://ajayrenjith.dev",
+    canonical: "https://portfolio-tau-dusky-45.vercel.app",
   },
   robots: {
     index: true,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ajay Renjith | Senior Full Stack Developer & Django Specialist",
     description: "Explore the professional portfolio of Ajay Renjith. Specialized in high-scale backend architectures, Django REST Framework, Next.js, React, and interactive 3D WebGL user interfaces.",
-    url: "https://ajayrenjith.dev",
+    url: "https://portfolio-tau-dusky-45.vercel.app",
     siteName: "Ajay Renjith - Portfolio",
     locale: "en_US",
     type: "website",
