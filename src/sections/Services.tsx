@@ -1,14 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code, Layout, Server, FileText, Palette, Zap, Cloud, Lightbulb } from 'lucide-react';
+import { Code, Layout, Server, FileText, Palette, Zap, Cloud, Lightbulb, Search, GitBranch } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import SectionHeader from '@/components/ui/SectionHeader';
 import Card from '@/components/ui/Card';
 import { services } from '@/data/services';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Code, Layout, Server, FileText, Palette, Zap, Cloud, Lightbulb,
+  Code, Layout, Server, FileText, Palette, Zap, Cloud, Lightbulb, Search, GitBranch,
 };
 
 export default function Services() {

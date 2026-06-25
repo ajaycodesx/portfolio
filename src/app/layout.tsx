@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ajay Renjith | Senior Full Stack Developer & Backend Architect",
-  description: "Professional portfolio of Ajay Renjith, a Senior Full Stack Developer & Django Specialist. Crafting high-performance web applications, custom CRM/CMS portals, and interactive 3D frontend systems.",
+  title: "Ajay Renjith | Senior Stack Engineer",
+  description: "Professional portfolio of Ajay Renjith, a Senior Stack Engineer. Crafting high-performance web applications, enterprise software architectures, and scalable cloud systems.",
   keywords: [
     "Ajay Renjith",
-    "Full Stack Developer",
+    "Lead Developer",
     "Backend Architect",
     "Django REST Framework Specialist",
     "React & Next.js Developer",
@@ -54,8 +54,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Ajay Renjith | Senior Full Stack Developer & Django Specialist",
-    description: "Explore the professional portfolio of Ajay Renjith. Specialized in high-scale backend architectures, Django REST Framework, Next.js, React, and interactive 3D WebGL user interfaces.",
+    title: "Ajay Renjith | Senior Stack Engineer",
+    description: "Explore the professional portfolio of Ajay Renjith. Specialized in high-scale backend architectures, Django REST Framework, Python FastAPI, Next.js, and technical leadership.",
     url: "https://portfolio-tau-dusky-45.vercel.app",
     siteName: "Ajay Renjith - Portfolio",
     locale: "en_US",
@@ -63,8 +63,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ajay Renjith | Senior Full Stack Developer & Backend Architect",
-    description: "Immersive 3D portfolio showcasing high-performance web applications, interactive 3D React visuals, and backend architectures.",
+    title: "Ajay Renjith | Senior Stack Engineer",
+    description: "Immersive 3D portfolio showcasing high-performance web applications, enterprise software platforms, and server infrastructures.",
     creator: "@ajayrenjith",
   },
 };

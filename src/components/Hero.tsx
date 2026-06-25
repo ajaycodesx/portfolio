@@ -9,11 +9,12 @@ import { socialLinks } from '@/data/social';
 import Hero3D from './Hero3D';
 
 const roles = [
-  'Django Specialist',
-  'React Developer',
+  'Lead Developer',
   'Backend Architect',
-  'Next.js Expert',
-  'DevOps Specialist',
+  'React & Next.js Expert',
+  'Django REST Specialist',
+  'Python FastAPI Expert',
+  'Engineering Team Leader',
 ];
 
 export default function Hero() {
@@ -43,7 +44,7 @@ export default function Hero() {
   }, [displayText, isDeleting, currentRole]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-28 md:pt-36 lg:pt-40 pb-12 px-4 md:px-8 lg:px-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-6 md:pt-28 pb-12 px-4 md:px-8 lg:px-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -57,10 +58,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-3 sm:mb-4"
             >
               Hi, I&apos;m{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="block mt-2 sm:mt-3 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Ajay Renjith
               </span>
             </motion.h1>
@@ -69,9 +70,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 mb-4"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 mb-3 sm:mb-4"
             >
-              Full Stack Developer | Django & React Specialist | Backend Architect
+              Senior Stack Engineer
             </motion.h2>
 
             <motion.div

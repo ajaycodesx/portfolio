@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { Github } from '@/components/ui/BrandIcons';
 import Section from '@/components/ui/Section';
@@ -12,15 +12,8 @@ import Card from '@/components/ui/Card';
 import { projects } from '@/data/projects';
 import type { Project } from '@/types';
 
-const categories = ['All', 'Full Stack', 'Frontend', 'Backend', 'CMS'];
-
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const filteredProjects = activeFilter === 'All'
-    ? projects
-    : projects.filter(p => p.category === activeFilter);
 
   return (
     <Section id="projects">
@@ -30,47 +23,31 @@ export default function Projects() {
         description="A showcase of projects that demonstrate my skills and expertise across different domains."
       />
 
-      {/* Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-3 mb-16">
-        {categories.map((category) => (
-          <motion.button
-            key={category}
-            onClick={() => setActiveFilter(category)}
-            className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-              activeFilter === category
-                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/25'
-                : 'bg-white/5 text-gray-400 border border-white/10 hover:border-blue-500/50 hover:text-white'
-            }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {category}
-          </motion.button>
-        ))}
-      </div>
-
-      {/* Projects Grid */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeFilter}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredProjects.map((project, index) => (
+      <div className="w-full">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
               className="h-full flex flex-col cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              <Card delayIndex={index} className="overflow-hidden">
-                {/* Image Placeholder */}
+              <Card delayIndex={index} className="overflow-hidden h-full flex flex-col">
+                {/* Image Render */}
                 <div className="h-48 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 relative overflow-hidden">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20" />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
                   {project.featured && (
                     <span className="absolute top-3 right-3 px-3 py-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold">
@@ -108,8 +85,9 @@ export default function Projects() {
               </Card>
             </motion.div>
           ))}
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      </div>
+
 
       {/* Project Detail Modal */}
       <Modal
@@ -119,7 +97,17 @@ export default function Projects() {
       >
         {selectedProject && (
           <div>
-            <div className="h-48 rounded-xl bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 mb-6" />
+            <div className="h-48 rounded-xl bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 mb-6 relative overflow-hidden">
+              {selectedProject.image ? (
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover object-top"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20" />
+              )}
+            </div>
             <p className="text-gray-300 text-base leading-relaxed mb-6">
               {selectedProject.longDescription || selectedProject.description}
             </p>

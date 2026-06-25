@@ -31,7 +31,7 @@ export default function Testimonials() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.4 }}
-              className="relative p-8 md:p-12 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10"
+              className="relative p-5 sm:p-8 md:p-12 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10"
             >
               {/* Quote icon */}
               <Quote className="w-12 h-12 text-blue-500/30 mb-6" />

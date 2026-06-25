@@ -19,7 +19,7 @@ export default function Experience() {
 
       <div className="max-w-4xl mx-auto relative">
         {/* Timeline Line */}
-        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transform md:-translate-x-1/2" />
+        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transform md:-translate-x-1/2" />
 
         {experience.map((exp, index) => (
           <motion.div
@@ -33,12 +33,12 @@ export default function Experience() {
             }`}
           >
             {/* Timeline Dot */}
-            <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 transform -translate-x-1/2 z-10 shadow-lg shadow-blue-500/50">
+            <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 transform -translate-x-1/2 z-10 shadow-lg shadow-blue-500/50">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 animate-ping opacity-20" />
             </div>
 
             {/* Content Card */}
-            <div className={`ml-16 md:ml-0 md:w-[calc(50%-2rem)] ${
+            <div className={`ml-10 md:ml-0 md:w-[calc(50%-2rem)] ${
               index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'
             }`}>
               <Card delayIndex={index} className="p-6">

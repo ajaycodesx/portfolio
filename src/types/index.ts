@@ -14,7 +14,7 @@ export interface Project {
 export interface Skill {
   name: string;
   level: number;
-  category: 'Frontend' | 'Backend' | 'Database' | 'DevOps' | 'Cloud' | 'UI/UX' | 'Tools';
+  category: 'Frontend' | 'Backend' | 'Cloud & Infra' | 'Leadership';
   icon?: string;
 }
 

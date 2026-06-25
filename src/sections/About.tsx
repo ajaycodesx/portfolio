@@ -8,9 +8,9 @@ import Card from '@/components/ui/Card';
 
 const stats = [
   { icon: Code, label: 'Projects Completed', value: '25+' },
-  { icon: Users, label: 'Happy Clients', value: '10+' },
-  { icon: Rocket, label: 'Years Experience', value: '5+' },
-  { icon: Server, label: 'Production Deployments', value: 'Multiple' },
+  { icon: Users, label: 'Engineering Division', value: '25+ Team' },
+  { icon: Rocket, label: 'Years Experience', value: '3+ Years' },
+  { icon: Server, label: 'VPS & AWS Deployments', value: 'Multiple' },
 ];
 
 export default function About() {
@@ -22,29 +22,31 @@ export default function About() {
         description="I build robust, scalable, and production-ready web applications with modern architectures."
       />
 
-      <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="grid lg:grid-cols-2 gap-16 items-stretch">
         {/* Left - About Text */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="h-full flex flex-col"
         >
-          <div className="relative">
-            <Card delayIndex={0} className="p-8">
+          <div className="relative h-full flex flex-col">
+            <Card delayIndex={0} className="p-5 md:p-8 h-full flex-1">
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                I am a full-stack developer focused on building robust, scalable, and production-ready web applications.
-                I have experience working on real-world systems including CMS platforms, CRM tools, email management systems,
-                quotation systems, and business dashboards using Django REST Framework and React.js.
+                I am a dynamic and results-driven Senior Stack Engineer with a proven track record of architecting robust
+                enterprise web applications, driving complex software deployments, and leading high-performing technical
+                teams. I specialize in translating business objectives and client requirements into concrete, scalable
+                architectural designs.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                My expertise includes backend architecture, API design, deployment automation, and VPS hosting using Ubuntu,
-                Docker, and control panels like CyberPanel and AAPanel. I believe in writing clean, maintainable code and
-                building systems that solve real business problems efficiently.
+                My expertise spans full-stack JavaScript and Python frameworks, including Next.js, React.js, Django REST Framework,
+                and FastAPI. I actively govern secure server infrastructure layouts on Hostinger VPS and AWS environments, maintaining
+                rigorous performance optimization and high system availability.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                When I&apos;m not coding, you&apos;ll find me exploring system design, DevOps workflows, CI/CD automation,
-                and modern backend optimization techniques.
+                From managing large engineering teams (25+ members) through agile sprints to directing end-to-end B2B SaaS
+                and CRM deployments, I focus on delivering scalable digital solutions that drive business innovation.
               </p>
             </Card>
           </div>
@@ -61,10 +63,12 @@ export default function About() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="h-full flex flex-col"
             >
-              <Card delayIndex={index + 1} className="p-6 text-center">
-                <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-                <h3 className="text-3xl font-bold text-white mb-1">{stat.value}</h3>
-                <p className="text-gray-400 text-sm">{stat.label}</p>
+              <Card delayIndex={index + 1} className="p-4 sm:p-6 text-center">
+                <div className="flex-1 flex flex-col justify-center items-center">
+                  <stat.icon className="w-8 h-8 text-blue-400 mb-3" />
+                  <h3 className="text-3xl font-bold text-white mb-1">{stat.value}</h3>
+                  <p className="text-gray-400 text-sm">{stat.label}</p>
+                </div>
               </Card>
             </motion.div>
           ))}

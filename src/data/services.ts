@@ -43,4 +43,16 @@ export const services: Service[] = [
     description: 'Building custom CRM analytics suites, visa-tracking systems, operational panels, and user-centric dashboards.',
     icon: 'Layout',
   },
+  {
+    id: '8',
+    title: 'Technical SEO & Analytics',
+    description: 'Optimizing web structures, rendering paths, and search schema injections to boost search engine visibility and analytics performance.',
+    icon: 'Search',
+  },
+  {
+    id: '9',
+    title: 'CI/CD & DevOps Automation',
+    description: 'Establishing automated test-and-build pipelines, secure Dockerized environments, and fast Git-driven software release workflows.',
+    icon: 'GitBranch',
+  },
 ];
