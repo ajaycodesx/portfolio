@@ -13,7 +13,7 @@ export default function Section({ id, children, className = '' }: SectionProps) 
   return (
     <section
       id={id}
-      className={`py-3 md:py-20 px-4 md:px-8 lg:px-16 ${className}`}
+      className={`py-10 md:py-20 px-4 md:px-8 lg:px-16 ${className}`}
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}

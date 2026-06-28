@@ -65,7 +65,7 @@ export default function Contact() {
         description="Have a project in mind? Let's talk! I'm always open to discussing new opportunities."
       />
 
-      <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+      <div className="grid lg:grid-cols-2 gap-8 md:gap-16 max-w-6xl mx-auto">
         {/* Left — Info */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -73,8 +73,8 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-bold text-white text-center lg:text-left mb-4">Let&apos;s work together</h3>
-          <p className="text-gray-400 leading-relaxed text-center lg:text-left mb-10 max-w-lg mx-auto lg:mx-0">
+          <h3 className="text-xl md:text-2xl font-bold text-white text-center lg:text-left mb-3 md:mb-4">Let&apos;s work together</h3>
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed text-center lg:text-left mb-6 md:mb-10 max-w-lg mx-auto lg:mx-0">
             Whether you need a full-stack application, a polished frontend, or just want to say hello —
             my inbox is always open. I&apos;ll get back to you within 24 hours.
           </p>

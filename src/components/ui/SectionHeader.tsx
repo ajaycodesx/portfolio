@@ -42,7 +42,7 @@ export default function SectionHeader({
         </motion.p>
       )}
       <h2 
-        className={`text-3xl md:text-5xl font-bold text-white ${
+        className={`text-2xl md:text-5xl font-bold text-white ${
           hasDescription 
             ? 'pb-2 md:pb-0 mb-2 md:mb-6' 
             : 'pb-4 md:pb-0 mb-4 md:mb-6'

@@ -28,7 +28,6 @@ export default function About() {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
           className="h-full flex flex-col"
         >
           <div className="relative h-full flex flex-col">

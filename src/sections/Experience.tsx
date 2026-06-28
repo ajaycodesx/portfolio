@@ -28,7 +28,7 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.5, delay: index * 0.15 }}
-            className={`relative flex items-start mb-12 ${
+            className={`relative flex items-start mb-8 md:mb-12 ${
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
             }`}
           >
@@ -49,8 +49,8 @@ export default function Experience() {
                   <span className="text-blue-400 text-sm font-medium">{exp.duration}</span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
-                <p className="text-purple-400 font-medium mb-4">{exp.company}</p>
+                <h3 className="text-lg md:text-xl font-bold text-white mb-1">{exp.role}</h3>
+                <p className="text-purple-400 text-sm md:text-base font-medium mb-3 md:mb-4">{exp.company}</p>
 
                 <ul className="space-y-2 mb-4">
                   {exp.responsibilities.slice(0, 3).map((resp, i) => (
