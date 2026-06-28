@@ -44,7 +44,7 @@ export default function Hero() {
   }, [displayText, isDeleting, currentRole]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-6 md:pt-28 pb-12 px-4 md:px-8 lg:px-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 md:pt-28 pb-12 px-4 md:px-8 lg:px-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -58,10 +58,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-3 sm:mb-4"
+              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2 sm:mb-4"
             >
               Hi, I&apos;m{' '}
-              <span className="block mt-2 sm:mt-3 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="block mt-1 sm:mt-3 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Ajay Renjith
               </span>
             </motion.h1>
@@ -70,7 +70,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 mb-3 sm:mb-4"
+              className="text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 mb-2 sm:mb-4"
             >
               Senior Stack Engineer
             </motion.h2>
@@ -79,13 +79,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-lg sm:text-xl md:text-2xl text-blue-400 mb-8 h-8"
+              className="text-sm sm:text-lg md:text-2xl text-blue-400 mb-4 sm:mb-8 h-8"
             >
               <span>{displayText}</span>
               <motion.span
                 animate={{ opacity: [1, 0] }}
                 transition={{ duration: 0.8, repeat: Infinity }}
-                className="inline-block w-0.5 h-6 bg-blue-400 ml-1"
+                className="inline-block w-0.5 h-5 sm:h-6 bg-blue-400 ml-1"
               />
             </motion.div>
 
@@ -93,7 +93,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="text-gray-400 text-sm sm:text-base md:text-lg mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0"
+              className="text-gray-400 text-xs sm:text-sm md:text-lg mb-6 sm:mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0"
             >
               I build scalable web applications, CMS platforms, and business automation systems using modern frameworks like Django, React, and Next.js. I specialize in backend architecture, API development, and deploying production-ready systems on VPS and cloud infrastructure.
             </motion.p>
@@ -102,7 +102,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-12"
             >
               <Button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
                 View Projects
@@ -161,7 +161,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

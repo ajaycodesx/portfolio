@@ -40,7 +40,10 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 py-8 text-center text-gray-500 text-sm border-t border-white/5 bg-gray-950/80 backdrop-blur-xl">
+      <footer 
+        className="relative z-10 py-8 text-center text-gray-500 text-sm border-t border-white/5 backdrop-blur-xl"
+        style={{ backgroundColor: 'rgba(10, 10, 15, 0.8)' }}
+      >
         <div className="max-w-7xl mx-auto px-4">
           <p>© {new Date().getFullYear()} Ajay Renjith. All rights reserved.</p>
         </div>
