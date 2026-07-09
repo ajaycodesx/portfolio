@@ -53,7 +53,7 @@ export default function Experience() {
                 <p className="text-purple-400 text-sm md:text-base font-medium mb-3 md:mb-4">{exp.company}</p>
 
                 <ul className="space-y-2 mb-4">
-                  {exp.responsibilities.slice(0, 3).map((resp, i) => (
+                  {exp.responsibilities.map((resp, i) => (
                     <li key={i} className="flex items-start gap-2 text-gray-400 text-sm">
                       <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
                       {resp}

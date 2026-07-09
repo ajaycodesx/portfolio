@@ -44,7 +44,7 @@ export default function Hero() {
   }, [displayText, isDeleting, currentRole]);
 
   return (
-    <section id="home" className="min-h-[100dvh] flex items-center justify-center pt-16 md:pt-28 pb-8 md:pb-12 px-4 md:px-8 lg:px-16 relative overflow-hidden">
+    <section id="home" className="min-h-[70dvh] flex items-center justify-center pt-16 md:pt-28 pb-8 md:pb-12 px-4 md:px-8 lg:px-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Left Content */}

@@ -29,7 +29,7 @@ export default function Home() {
       <Navbar />
 
       {/* Page sections */}
-      <main className="relative z-10 flex flex-col w-full">
+      <main className="relative z-10 flex flex-col w-full overflow-hidden">
         <Hero />
         <About />
         <Skills />

@@ -10,7 +10,7 @@ import Button from '@/components/ui/Button';
 import emailjs from '@emailjs/browser';
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'ajayrenjith.work@gmail.com', href: 'mailto:ajayrenjith.work@gmail.com' },
+  { icon: Mail, label: 'Email', value: 'ajayrenjithjobs@gmail.com', href: 'mailto:ajayrenjithjobs@gmail.com' },
   { icon: Phone, label: 'Phone', value: '+91 9633175758', href: 'tel:+919633175758' },
   { icon: MapPin, label: 'Location', value: 'Kochi, Kerala, India', href: '#' },
 ];

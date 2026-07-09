@@ -47,6 +47,18 @@ export default function About() {
                 From managing large engineering teams (25+ members) through agile sprints to directing end-to-end B2B SaaS
                 and CRM deployments, I focus on delivering scalable digital solutions that drive business innovation.
               </p>
+              <div className="mt-8 pt-6 border-t border-white/10">
+                <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                  Education
+                </h4>
+                <p className="text-gray-300">
+                  <strong className="text-white">B.C.A. (Computer Applications)</strong>
+                  <span className="block text-sm text-gray-400 mt-1">
+                    Mar Kuriakose Arts and Science College, Puthuvely | Graduated 2022
+                  </span>
+                </p>
+              </div>
             </Card>
           </div>
         </motion.div>
