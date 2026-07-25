@@ -28,7 +28,7 @@ export default function SectionHeader({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`mb-8 sm:mb-12 md:mb-16 ${alignClass}`}
+      className={`py-2 mb-2 sm:mb-12 md:mb-16 ${alignClass}`}
     >
       {subtitle && (
         <motion.p
@@ -36,16 +36,16 @@ export default function SectionHeader({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xs sm:text-sm text-blue-400 font-semibold tracking-wider uppercase mb-2 md:mb-3"
+          className="py-1 text-xs sm:text-sm text-blue-400 font-semibold tracking-wider uppercase mb-1 sm:mb-2 md:mb-3"
         >
           {subtitle}
         </motion.p>
       )}
       <h2 
-        className={`text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight ${
+        className={`py-1 text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight ${
           hasDescription 
-            ? 'mb-3 md:mb-4' 
-            : 'mb-4 md:mb-6'
+            ? 'mb-2 sm:mb-3 md:mb-4' 
+            : 'mb-3 sm:mb-4 md:mb-6'
         }`}
       >
         {title}

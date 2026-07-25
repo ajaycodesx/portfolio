@@ -72,25 +72,25 @@ export default function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col justify-center"
+          className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left"
         >
-          <h3 className="text-xl md:text-2xl font-bold text-white text-left mb-3 md:mb-4">Let&apos;s work together</h3>
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed text-left mb-6 md:mb-10 max-w-lg">
+          <h3 className="text-xl md:text-2xl font-bold text-white text-center lg:text-left mb-3 md:mb-4">Let&apos;s work together</h3>
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed text-center lg:text-left mb-6 md:mb-10 max-w-lg mx-auto lg:mx-0">
             Whether you need a full-stack application, a polished frontend, or just want to say hello —
             my inbox is always open. I&apos;ll get back to you within 24 hours.
           </p>
 
-          <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10 flex flex-col items-start">
+          <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10 flex flex-col items-center lg:items-start w-full">
             {contactInfo.map(({ icon: Icon, label, value, href }) => (
               <a
                 key={label}
                 href={href}
-                className="flex flex-row items-center text-left gap-3.5 sm:gap-4 group w-full p-2 rounded-xl hover:bg-white/5 transition-all"
+                className="flex flex-col sm:flex-row items-center justify-center lg:justify-start text-center sm:text-left gap-3.5 sm:gap-4 group w-full p-2.5 rounded-xl hover:bg-white/5 transition-all"
               >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-blue-500/40 group-hover:to-purple-500/40 transition-all duration-300 flex-shrink-0">
                   <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
                 </div>
-                <div className="flex flex-col items-start min-w-0">
+                <div className="flex flex-col items-center sm:items-start min-w-0">
                   <p className="text-gray-500 text-xs sm:text-sm">{label}</p>
                   <p className="text-white font-medium text-sm sm:text-base group-hover:text-blue-400 transition-colors truncate max-w-full">{value}</p>
                 </div>
@@ -98,7 +98,7 @@ export default function Contact() {
             ))}
           </div>
 
-          <div className="flex justify-start gap-4">
+          <div className="flex justify-center lg:justify-start gap-4 w-full">
             {socialLinks.map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}

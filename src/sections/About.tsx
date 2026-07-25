@@ -31,7 +31,7 @@ export default function About() {
           className="h-full flex flex-col"
         >
           <div className="relative h-full flex flex-col">
-            <Card delayIndex={0} className="p-5 md:p-8 h-full flex-1">
+            <Card delayIndex={0} className="p-5 md:p-8 h-full flex-1 text-center lg:text-left">
               <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
                 I am a dynamic and results-driven Senior Stack Engineer with a proven track record of architecting robust
                 enterprise web applications, driving complex software deployments, and leading high-performing technical
@@ -48,11 +48,11 @@ export default function About() {
                 and CRM deployments, I focus on delivering scalable digital solutions that drive business innovation.
               </p>
               <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/10">
-                <h4 className="text-white font-semibold mb-2 flex items-center gap-2 text-sm sm:text-base">
+                <h4 className="text-white font-semibold mb-2 flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                   Education
                 </h4>
-                <p className="text-gray-300 text-sm sm:text-base">
+                <p className="text-gray-300 text-sm sm:text-base text-center lg:text-left">
                   <strong className="text-white">B.C.A. (Computer Applications)</strong>
                   <span className="block text-xs sm:text-sm text-gray-400 mt-1">
                     Mar Kuriakose Arts and Science College, Puthuvely | Graduated 2022
