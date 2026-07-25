@@ -58,10 +58,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-1 sm:mb-4"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2 sm:mb-4 tracking-tight"
             >
               Hi, I&apos;m{' '}
-              <span className="block mt-0.5 sm:mt-3 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="block mt-1 sm:mt-3 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Ajay Renjith
               </span>
             </motion.h1>
@@ -70,7 +70,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-sm sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 mb-1 sm:mb-4"
+              className="text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 mb-2 sm:mb-4"
             >
               Senior Stack Engineer
             </motion.h2>
@@ -79,13 +79,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-xs sm:text-lg md:text-2xl text-blue-400 mb-3 sm:mb-8 h-6 sm:h-8"
+              className="text-sm sm:text-lg md:text-2xl text-blue-400 mb-4 sm:mb-8 h-7 sm:h-8 md:h-10 font-medium flex items-center justify-center lg:justify-start"
             >
               <span>{displayText}</span>
               <motion.span
                 animate={{ opacity: [1, 0] }}
                 transition={{ duration: 0.8, repeat: Infinity }}
-                className="inline-block w-0.5 h-5 sm:h-6 bg-blue-400 ml-1"
+                className="inline-block w-0.5 h-4 sm:h-6 bg-blue-400 ml-1.5"
               />
             </motion.div>
 
@@ -93,7 +93,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="text-gray-400 text-xs sm:text-sm md:text-lg mb-4 sm:mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0"
+              className="text-gray-400 text-xs sm:text-base md:text-lg mb-6 sm:mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0"
             >
               I build scalable web applications, CMS platforms, and business automation systems using modern frameworks like Django, React, and Next.js. I specialize in backend architecture, API development, and deploying production-ready systems on VPS and cloud infrastructure.
             </motion.p>
@@ -102,17 +102,17 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-row flex-wrap gap-2 sm:gap-4 justify-center lg:justify-start mb-5 sm:mb-12"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-6 sm:mb-12 w-full"
             >
-              <Button size="sm" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Button size="sm" className="w-full sm:w-auto" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
                 View Projects
-                <ArrowRight className="ml-1.5 w-4 h-4 sm:ml-2 sm:w-5 sm:h-5" />
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <Button size="sm" variant="outline" onClick={() => window.open('/resume.pdf', '_blank')}>
-                <Download className="mr-1.5 w-4 h-4 sm:mr-2 sm:w-5 sm:h-5" />
+              <Button size="sm" variant="outline" className="w-full sm:w-auto" onClick={() => window.open('/resume.pdf', '_blank')}>
+                <Download className="mr-2 w-4 h-4" />
                 Resume
               </Button>
-              <Button size="sm" variant="secondary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Button size="sm" variant="secondary" className="w-full sm:w-auto" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                 Contact
               </Button>
             </motion.div>
@@ -121,7 +121,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex items-center justify-center lg:justify-start gap-3 sm:gap-6"
+              className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6"
             >
               {socialLinks.map((social) => {
                 const Icon = social.icon === 'Github' ? Github : 
@@ -133,11 +133,11 @@ export default function Hero() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 sm:p-3 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-blue-400 hover:border-blue-500/50 transition-all"
+                    className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-blue-400 hover:border-blue-500/50 transition-all"
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Icon size={18} />
+                    <Icon size={20} />
                   </motion.a>
                 );
               })}
@@ -149,7 +149,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:block relative w-full h-[500px]"
+            className="relative w-full h-[280px] sm:h-[380px] lg:h-[500px] mt-4 lg:mt-0"
           >
             <Hero3D />
           </motion.div>

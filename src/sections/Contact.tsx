@@ -72,32 +72,33 @@ export default function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="flex flex-col justify-center"
         >
-          <h3 className="text-xl md:text-2xl font-bold text-white text-center lg:text-left mb-3 md:mb-4">Let&apos;s work together</h3>
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed text-center lg:text-left mb-6 md:mb-10 max-w-lg mx-auto lg:mx-0">
+          <h3 className="text-xl md:text-2xl font-bold text-white text-left mb-3 md:mb-4">Let&apos;s work together</h3>
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed text-left mb-6 md:mb-10 max-w-lg">
             Whether you need a full-stack application, a polished frontend, or just want to say hello —
             my inbox is always open. I&apos;ll get back to you within 24 hours.
           </p>
 
-          <div className="space-y-6 mb-10 flex flex-col items-center lg:items-start">
+          <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10 flex flex-col items-start">
             {contactInfo.map(({ icon: Icon, label, value, href }) => (
               <a
                 key={label}
                 href={href}
-                className="flex flex-col items-center text-center lg:flex-row lg:text-left lg:items-center gap-4 group"
+                className="flex flex-row items-center text-left gap-3.5 sm:gap-4 group w-full p-2 rounded-xl hover:bg-white/5 transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-blue-500/40 group-hover:to-purple-500/40 transition-all duration-300">
-                  <Icon className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-blue-500/40 group-hover:to-purple-500/40 transition-all duration-300 flex-shrink-0">
+                  <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
                 </div>
-                <div className="flex flex-col items-center lg:items-start">
-                  <p className="text-gray-500 text-sm">{label}</p>
-                  <p className="text-white font-medium group-hover:text-blue-400 transition-colors">{value}</p>
+                <div className="flex flex-col items-start min-w-0">
+                  <p className="text-gray-500 text-xs sm:text-sm">{label}</p>
+                  <p className="text-white font-medium text-sm sm:text-base group-hover:text-blue-400 transition-colors truncate max-w-full">{value}</p>
                 </div>
               </a>
             ))}
           </div>
 
-          <div className="flex justify-center lg:justify-start gap-4">
+          <div className="flex justify-start gap-4">
             {socialLinks.map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
@@ -105,11 +106,11 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/50 transition-all"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/50 transition-all"
                 whileHover={{ y: -4, scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <Icon size={20} />
+                <Icon size={18} />
               </motion.a>
             ))}
           </div>
@@ -126,12 +127,12 @@ export default function Contact() {
             <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 opacity-20 blur" />
             <form
               onSubmit={handleSubmit}
-              className="relative p-5 md:p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 space-y-5"
+              className="relative p-4 sm:p-6 md:p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 space-y-4 sm:space-y-5"
             >
-              <div className="grid sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 {(['name', 'email'] as const).map((field) => (
                   <div key={field}>
-                    <label className="block text-gray-400 text-sm mb-2 capitalize">{field}</label>
+                    <label className="block text-gray-400 text-xs sm:text-sm mb-1.5 sm:mb-2 capitalize">{field}</label>
                     <input
                       type={field === 'email' ? 'email' : 'text'}
                       name={field}
@@ -139,13 +140,13 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       placeholder={field === 'email' ? 'you@example.com' : 'Ajay Renjith'}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/60 focus:bg-white/10 transition-all"
+                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-white text-base placeholder-gray-600 focus:outline-none focus:border-blue-500/60 focus:bg-white/10 transition-all"
                     />
                   </div>
                 ))}
               </div>
               <div>
-                <label className="block text-gray-400 text-sm mb-2">Subject</label>
+                <label className="block text-gray-400 text-xs sm:text-sm mb-1.5 sm:mb-2">Subject</label>
                 <input
                   type="text"
                   name="subject"
@@ -153,19 +154,19 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Project inquiry"
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/60 focus:bg-white/10 transition-all"
+                  className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-white text-base placeholder-gray-600 focus:outline-none focus:border-blue-500/60 focus:bg-white/10 transition-all"
                 />
               </div>
               <div>
-                <label className="block text-gray-400 text-sm mb-2">Message</label>
+                <label className="block text-gray-400 text-xs sm:text-sm mb-1.5 sm:mb-2">Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
+                  rows={4}
                   placeholder="Tell me about your project..."
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/60 focus:bg-white/10 transition-all resize-none"
+                  className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-white text-base placeholder-gray-600 focus:outline-none focus:border-blue-500/60 focus:bg-white/10 transition-all resize-none"
                 />
               </div>
               <Button

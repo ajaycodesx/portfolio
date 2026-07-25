@@ -20,7 +20,7 @@ export default function Services() {
         description="Comprehensive development services tailored to bring your vision to life."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
         {services.map((service, index) => {
           const Icon = iconMap[service.icon] || Code;
           return (
@@ -32,14 +32,14 @@ export default function Services() {
               transition={{ duration: 0.4, delay: index * 0.08 }}
               className="h-full flex flex-col"
             >
-              <Card delayIndex={index} className="p-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center mb-5 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-300">
-                  <Icon className="w-6 h-6 text-blue-400" />
+              <Card delayIndex={index} className="p-4 sm:p-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center mb-4 sm:mb-5 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-300">
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3 group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed flex-grow">
+                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed flex-grow">
                   {service.description}
                 </p>
               </Card>

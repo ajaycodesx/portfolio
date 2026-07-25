@@ -9,6 +9,20 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
+  abstract?: string;
+  problemStatement?: string;
+  architectureModules?: {
+    title: string;
+    subtitle: string;
+    description: string;
+    highlights: string[];
+  }[];
+  workflowStages?: {
+    stage: number;
+    title: string;
+    description: string;
+  }[];
+  keyHighlights?: string[];
 }
 
 export interface Skill {

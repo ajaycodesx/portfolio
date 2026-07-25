@@ -19,7 +19,7 @@ export default function Experience() {
 
       <div className="max-w-4xl mx-auto relative">
         {/* Timeline Line */}
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transform md:-translate-x-1/2" />
+        <div className="absolute left-3 sm:left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transform md:-translate-x-1/2" />
 
         {experience.map((exp, index) => (
           <motion.div
@@ -28,40 +28,40 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.5, delay: index * 0.15 }}
-            className={`relative flex items-start mb-8 md:mb-12 ${
+            className={`relative flex items-start mb-6 sm:mb-8 md:mb-12 ${
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
             }`}
           >
             {/* Timeline Dot */}
-            <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 transform -translate-x-1/2 z-10 shadow-lg shadow-blue-500/50">
+            <div className="absolute left-3 sm:left-4 md:left-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 transform -translate-x-1/2 z-10 shadow-lg shadow-blue-500/50">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 animate-ping opacity-20" />
             </div>
 
             {/* Content Card */}
-            <div className={`ml-10 md:ml-0 md:w-[calc(50%-2rem)] ${
+            <div className={`ml-7 sm:ml-10 md:ml-0 md:w-[calc(50%-2rem)] ${
               index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'
             }`}>
-              <Card delayIndex={index} className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-blue-500/10">
-                    <Briefcase className="w-5 h-5 text-blue-400" />
+              <Card delayIndex={index} className="p-4 sm:p-6">
+                <div className="flex items-center gap-2.5 sm:gap-3 mb-2.5 sm:mb-3">
+                  <div className="p-1.5 sm:p-2 rounded-lg bg-blue-500/10">
+                    <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
                   </div>
-                  <span className="text-blue-400 text-sm font-medium">{exp.duration}</span>
+                  <span className="text-blue-400 text-xs sm:text-sm font-medium">{exp.duration}</span>
                 </div>
 
-                <h3 className="text-lg md:text-xl font-bold text-white mb-1">{exp.role}</h3>
-                <p className="text-purple-400 text-sm md:text-base font-medium mb-3 md:mb-4">{exp.company}</p>
+                <h3 className="text-base sm:text-xl font-bold text-white mb-1">{exp.role}</h3>
+                <p className="text-purple-400 text-xs sm:text-base font-medium mb-3 md:mb-4">{exp.company}</p>
 
                 <ul className="space-y-2 mb-4">
                   {exp.responsibilities.map((resp, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-400 text-sm">
+                    <li key={i} className="flex items-start gap-2 text-gray-400 text-xs sm:text-sm leading-relaxed">
                       <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
                       {resp}
                     </li>
                   ))}
                 </ul>
 
-                <div className="mt-6 pt-4 border-t border-white/5 w-full flex flex-wrap gap-2">
+                <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-white/5 w-full flex flex-wrap gap-1.5 sm:gap-2">
                   {exp.technologies.map((tech) => (
                     <Tag key={tech}>{tech}</Tag>
                   ))}

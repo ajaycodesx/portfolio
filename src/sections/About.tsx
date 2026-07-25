@@ -22,7 +22,7 @@ export default function About() {
         description="I build robust, scalable, and production-ready web applications with modern architectures."
       />
 
-      <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
         {/* Left - About Text */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -32,29 +32,29 @@ export default function About() {
         >
           <div className="relative h-full flex flex-col">
             <Card delayIndex={0} className="p-5 md:p-8 h-full flex-1">
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
                 I am a dynamic and results-driven Senior Stack Engineer with a proven track record of architecting robust
                 enterprise web applications, driving complex software deployments, and leading high-performing technical
                 teams. I specialize in translating business objectives and client requirements into concrete, scalable
                 architectural designs.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
                 My expertise spans full-stack JavaScript and Python frameworks, including Next.js, React.js, Django REST Framework,
                 and FastAPI. I actively govern secure server infrastructure layouts on Hostinger VPS and AWS environments, maintaining
                 rigorous performance optimization and high system availability.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
                 From managing large engineering teams (25+ members) through agile sprints to directing end-to-end B2B SaaS
                 and CRM deployments, I focus on delivering scalable digital solutions that drive business innovation.
               </p>
-              <div className="mt-8 pt-6 border-t border-white/10">
-                <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/10">
+                <h4 className="text-white font-semibold mb-2 flex items-center gap-2 text-sm sm:text-base">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                   Education
                 </h4>
-                <p className="text-gray-300">
+                <p className="text-gray-300 text-sm sm:text-base">
                   <strong className="text-white">B.C.A. (Computer Applications)</strong>
-                  <span className="block text-sm text-gray-400 mt-1">
+                  <span className="block text-xs sm:text-sm text-gray-400 mt-1">
                     Mar Kuriakose Arts and Science College, Puthuvely | Graduated 2022
                   </span>
                 </p>
@@ -64,7 +64,7 @@ export default function About() {
         </motion.div>
 
         {/* Right - Stats Grid */}
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -74,11 +74,11 @@ export default function About() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="h-full flex flex-col"
             >
-              <Card delayIndex={index + 1} className="p-4 sm:p-6 text-center">
+              <Card delayIndex={index + 1} className="p-3.5 sm:p-6 text-center">
                 <div className="flex-1 flex flex-col justify-center items-center">
-                  <stat.icon className="w-8 h-8 text-blue-400 mb-3" />
-                  <h3 className="text-3xl font-bold text-white mb-1">{stat.value}</h3>
-                  <p className="text-gray-400 text-sm">{stat.label}</p>
+                  <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 mb-2 sm:mb-3" />
+                  <h3 className="text-xl sm:text-3xl font-bold text-white mb-1">{stat.value}</h3>
+                  <p className="text-gray-400 text-xs sm:text-sm">{stat.label}</p>
                 </div>
               </Card>
             </motion.div>
