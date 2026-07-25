@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code, Server, Rocket, Users } from 'lucide-react';
+import { Code, Server, Rocket, Users, Cpu, ShieldCheck } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import SectionHeader from '@/components/ui/SectionHeader';
 import Card from '@/components/ui/Card';
@@ -11,6 +11,8 @@ const stats = [
   { icon: Users, label: 'Engineering Division', value: '25+ Team' },
   { icon: Rocket, label: 'Years Experience', value: '3+ Years' },
   { icon: Server, label: 'VPS & AWS Deployments', value: 'Multiple' },
+  { icon: Cpu, label: 'Enterprise Platforms', value: '3+ SaaS' },
+  { icon: ShieldCheck, label: 'Quality Bug Reduction', value: '20%' },
 ];
 
 export default function About() {
@@ -22,7 +24,7 @@ export default function About() {
         description="I build robust, scalable, and production-ready web applications with modern architectures."
       />
 
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
         {/* Left - About Text */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -31,22 +33,24 @@ export default function About() {
           className="h-full flex flex-col"
         >
           <div className="relative h-full flex flex-col">
-            <Card delayIndex={0} className="p-5 md:p-8 h-full flex-1 text-center lg:text-left">
-              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
-                I am a dynamic and results-driven Senior Stack Engineer with a proven track record of architecting robust
-                enterprise web applications, driving complex software deployments, and leading high-performing technical
-                teams. I specialize in translating business objectives and client requirements into concrete, scalable
-                architectural designs.
-              </p>
-              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
-                My expertise spans full-stack JavaScript and Python frameworks, including Next.js, React.js, Django REST Framework,
-                and FastAPI. I actively govern secure server infrastructure layouts on Hostinger VPS and AWS environments, maintaining
-                rigorous performance optimization and high system availability.
-              </p>
-              <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-                From managing large engineering teams (25+ members) through agile sprints to directing end-to-end B2B SaaS
-                and CRM deployments, I focus on delivering scalable digital solutions that drive business innovation.
-              </p>
+            <Card delayIndex={0} className="p-5 md:p-8 h-full flex-1 flex flex-col justify-between text-center lg:text-left">
+              <div>
+                <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+                  I am a dynamic and results-driven Senior Stack Engineer with a proven track record of architecting robust
+                  enterprise web applications, driving complex software deployments, and leading high-performing technical
+                  teams. I specialize in translating business objectives and client requirements into concrete, scalable
+                  architectural designs.
+                </p>
+                <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+                  My expertise spans full-stack JavaScript and Python frameworks, including Next.js, React.js, Django REST Framework,
+                  and FastAPI. I actively govern secure server infrastructure layouts on Hostinger VPS and AWS environments, maintaining
+                  rigorous performance optimization and high system availability.
+                </p>
+                <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+                  From managing large engineering teams (25+ members) through agile sprints to directing end-to-end B2B SaaS
+                  and CRM deployments, I focus on delivering scalable digital solutions that drive business innovation.
+                </p>
+              </div>
               <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/10">
                 <h4 className="text-white font-semibold mb-2 flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
@@ -63,21 +67,21 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Right - Stats Grid */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-6">
+        {/* Right - Stats Grid (6 cards in 2 cols x 3 rows) */}
+        <div className="grid grid-cols-2 grid-rows-3 gap-3 sm:gap-5">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
               className="h-full flex flex-col"
             >
-              <Card delayIndex={index + 1} className="p-3.5 sm:p-6 text-center">
+              <Card delayIndex={index + 1} className="p-3.5 sm:p-5 text-center h-full flex flex-col justify-center items-center">
                 <div className="flex-1 flex flex-col justify-center items-center">
                   <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 mb-2 sm:mb-3" />
-                  <h3 className="text-xl sm:text-3xl font-bold text-white mb-1">{stat.value}</h3>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</h3>
                   <p className="text-gray-400 text-xs sm:text-sm">{stat.label}</p>
                 </div>
               </Card>

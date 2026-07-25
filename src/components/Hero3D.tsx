@@ -75,6 +75,8 @@ export default function Hero3D() {
       
       <Canvas
         camera={{ position: [0, 0, 5], fov: 60 }}
+        dpr={[1, 1.5]}
+        gl={{ powerPreference: 'high-performance' }}
         style={{ background: 'transparent' }}
       >
         <ambientLight intensity={0.6} />

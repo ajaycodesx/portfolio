@@ -197,7 +197,12 @@ export default function ThreeBackground() {
       />
 
       {/* Dynamic 3D network connection graph */}
-      <Canvas camera={{ position: [0, 0, 5.5], fov: 60 }} style={{ background: 'transparent' }}>
+      <Canvas
+        camera={{ position: [0, 0, 5.5], fov: 60 }}
+        dpr={[1, 1.5]}
+        gl={{ powerPreference: 'high-performance', antialias: false }}
+        style={{ background: 'transparent' }}
+      >
         <ambientLight intensity={0.8} />
         <NetworkNodes />
       </Canvas>

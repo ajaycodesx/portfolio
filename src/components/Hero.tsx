@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Download, ArrowRight } from 'lucide-react';
-import { Github, Linkedin, Instagram } from '@/components/ui/BrandIcons';
+import { Github, Linkedin } from '@/components/ui/BrandIcons';
 import Button from './ui/Button';
 import { socialLinks } from '@/data/social';
 import Hero3D from './Hero3D';
@@ -141,8 +141,7 @@ export default function Hero() {
             >
               {socialLinks.map((social) => {
                 const Icon = social.icon === 'Github' ? Github : 
-                           social.icon === 'Linkedin' ? Linkedin :
-                           social.icon === 'Instagram' ? Instagram : Mail;
+                           social.icon === 'Linkedin' ? Linkedin : Mail;
                 return (
                   <motion.a
                     key={social.name}

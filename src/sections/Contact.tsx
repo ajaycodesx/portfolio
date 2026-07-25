@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
-import { Github, Linkedin, Instagram } from '@/components/ui/BrandIcons';
+import { Github, Linkedin } from '@/components/ui/BrandIcons';
 import Section from '@/components/ui/Section';
 import SectionHeader from '@/components/ui/SectionHeader';
 import Button from '@/components/ui/Button';
@@ -18,7 +18,7 @@ const contactInfo = [
 const socialLinks = [
   { icon: Github, href: 'https://github.com/ajaycodesx', label: 'GitHub' },
   { icon: Linkedin, href: 'https://linkedin.com/in/ajay-renjith', label: 'LinkedIn' },
-  { icon: Instagram, href: 'https://instagram.com/_aj_aii._', label: 'Instagram' },
+  { icon: Mail, href: 'mailto:ajayrenjithjobs@gmail.com', label: 'Email' },
 ];
 
 export default function Contact() {
@@ -65,54 +65,58 @@ export default function Contact() {
         description="Have a project in mind? Let's talk! I'm always open to discussing new opportunities."
       />
 
-      <div className="grid lg:grid-cols-2 gap-8 md:gap-16 max-w-6xl mx-auto">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto items-stretch">
         {/* Left — Info */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left"
+          className="h-full flex flex-col"
         >
-          <h3 className="text-xl md:text-2xl font-bold text-white text-center lg:text-left mb-3 md:mb-4">Let&apos;s work together</h3>
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed text-center lg:text-left mb-6 md:mb-10 max-w-lg mx-auto lg:mx-0">
-            Whether you need a full-stack application, a polished frontend, or just want to say hello —
-            my inbox is always open. I&apos;ll get back to you within 24 hours.
-          </p>
+          <div className="relative h-full flex flex-col justify-between p-4 sm:p-6 md:p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold text-white text-center lg:text-left mb-3 md:mb-4">Let&apos;s work together</h3>
+              <p className="text-gray-400 text-sm md:text-base leading-relaxed text-center lg:text-left mb-6 md:mb-8 max-w-lg mx-auto lg:mx-0">
+                Whether you need a full-stack application, a polished frontend, or just want to say hello —
+                my inbox is always open. I&apos;ll get back to you within 24 hours.
+              </p>
 
-          <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10 flex flex-col items-center lg:items-start w-full">
-            {contactInfo.map(({ icon: Icon, label, value, href }) => (
-              <a
-                key={label}
-                href={href}
-                className="flex flex-col sm:flex-row items-center justify-center lg:justify-start text-center sm:text-left gap-3.5 sm:gap-4 group w-full p-2.5 rounded-xl hover:bg-white/5 transition-all"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-blue-500/40 group-hover:to-purple-500/40 transition-all duration-300 flex-shrink-0">
-                  <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
-                </div>
-                <div className="flex flex-col items-center sm:items-start min-w-0">
-                  <p className="text-gray-500 text-xs sm:text-sm">{label}</p>
-                  <p className="text-white font-medium text-sm sm:text-base group-hover:text-blue-400 transition-colors truncate max-w-full">{value}</p>
-                </div>
-              </a>
-            ))}
-          </div>
+              <div className="space-y-3 sm:space-y-4 mb-6 flex flex-col items-center lg:items-start w-full">
+                {contactInfo.map(({ icon: Icon, label, value, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    className="flex flex-col sm:flex-row items-center justify-center lg:justify-start text-center sm:text-left gap-3.5 sm:gap-4 group w-full p-2.5 rounded-xl hover:bg-white/5 transition-all"
+                  >
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-blue-500/40 group-hover:to-purple-500/40 transition-all duration-300 flex-shrink-0">
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
+                    </div>
+                    <div className="flex flex-col items-center sm:items-start min-w-0">
+                      <p className="text-gray-500 text-xs sm:text-sm">{label}</p>
+                      <p className="text-white font-medium text-sm sm:text-base group-hover:text-blue-400 transition-colors truncate max-w-full">{value}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
 
-          <div className="flex justify-center lg:justify-start gap-4 w-full">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <motion.a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/50 transition-all"
-                whileHover={{ y: -4, scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon size={18} />
-              </motion.a>
-            ))}
+            <div className="flex justify-center lg:justify-start gap-4 w-full pt-4 border-t border-white/5">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <motion.a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/50 transition-all"
+                  whileHover={{ y: -4, scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Icon size={18} />
+                </motion.a>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -122,12 +126,13 @@ export default function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="h-full flex flex-col"
         >
-          <div className="relative">
+          <div className="relative h-full flex flex-col">
             <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 opacity-20 blur" />
             <form
               onSubmit={handleSubmit}
-              className="relative p-4 sm:p-6 md:p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 space-y-4 sm:space-y-5"
+              className="relative h-full flex flex-col justify-between p-4 sm:p-6 md:p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 space-y-4 sm:space-y-5"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 {(['name', 'email'] as const).map((field) => (

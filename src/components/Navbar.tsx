@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Mail } from 'lucide-react';
-import { Github, Linkedin, Instagram } from '@/components/ui/BrandIcons';
+import { Github, Linkedin } from '@/components/ui/BrandIcons';
 import { socialLinks } from '@/data/social';
 
 const navItems = [
@@ -100,7 +100,7 @@ export default function Navbar() {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className={`relative text-sm font-medium transition-colors duration-300 ${
+                  className={`relative text-sm sm:text-base md:text-lg font-medium transition-colors duration-300 ${
                     activeSection === item.href.substring(1)
                       ? 'text-blue-400'
                       : 'text-gray-300 hover:text-white'
@@ -122,8 +122,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon === 'Github' ? Github : 
-                             social.icon === 'Linkedin' ? Linkedin :
-                             social.icon === 'Instagram' ? Instagram : Mail;
+                             social.icon === 'Linkedin' ? Linkedin : Mail;
                 return (
                   <motion.a
                     key={social.name}
@@ -239,10 +238,10 @@ export default function Navbar() {
                   />
                   {/* Link text */}
                   <span
-                    className={`text-2xl font-semibold tracking-tight transition-all duration-300 ${
+                    className={`text-sm sm:text-base md:text-lg font-medium tracking-tight transition-all duration-300 ${
                       activeSection === item.href.substring(1)
                         ? 'text-white'
-                        : 'text-gray-500 group-hover:text-white group-hover:translate-x-1'
+                        : 'text-gray-400 group-hover:text-white group-hover:translate-x-1'
                     }`}
                   >
                     {item.name}
@@ -273,8 +272,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-5">
                   {socialLinks.map((social) => {
                     const Icon = social.icon === 'Github' ? Github : 
-                                 social.icon === 'Linkedin' ? Linkedin :
-                                 social.icon === 'Instagram' ? Instagram : Mail;
+                                 social.icon === 'Linkedin' ? Linkedin : Mail;
                     return (
                       <motion.a
                         key={social.name}
