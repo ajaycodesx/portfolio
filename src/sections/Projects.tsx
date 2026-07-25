@@ -96,8 +96,8 @@ export default function Projects() {
         title={selectedProject?.title}
       >
         {selectedProject && (
-          <div className="space-y-6 max-h-[75vh] overflow-y-auto pr-1">
-            <div className="h-44 sm:h-56 rounded-xl bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 relative overflow-hidden">
+          <div>
+            <div className="h-40 sm:h-52 rounded-xl bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 mb-4 sm:mb-6 relative overflow-hidden">
               {selectedProject.image ? (
                 <img
                   src={selectedProject.image}
@@ -108,91 +108,18 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20" />
               )}
             </div>
-
-            {/* Overview / Long Description */}
-            <div>
-              <h4 className="text-white font-semibold text-base mb-2">Project Overview</h4>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {selectedProject.longDescription || selectedProject.description}
-              </p>
-            </div>
-
-            {/* Abstract & Problem Statement (if present) */}
-            {selectedProject.abstract && (
-              <div className="bg-white/5 border border-white/10 rounded-xl p-4 sm:p-5 space-y-4">
-                <div>
-                  <span className="text-xs uppercase font-bold tracking-wider text-blue-400">Executive Abstract</span>
-                  <p className="text-gray-300 text-sm leading-relaxed mt-1">{selectedProject.abstract}</p>
-                </div>
-                {selectedProject.problemStatement && (
-                  <div>
-                    <span className="text-xs uppercase font-bold tracking-wider text-purple-400">Operational Problem & Solution</span>
-                    <p className="text-gray-300 text-sm leading-relaxed mt-1">{selectedProject.problemStatement}</p>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Architecture Modules Breakdown */}
-            {selectedProject.architectureModules && selectedProject.architectureModules.length > 0 && (
-              <div>
-                <h4 className="text-white font-semibold text-base mb-3">Architectural Module Breakdown</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                  {selectedProject.architectureModules.map((mod, idx) => (
-                    <div key={idx} className="bg-gray-900/80 border border-white/10 rounded-lg p-3.5 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-baseline justify-between mb-1">
-                          <span className="text-sm font-bold text-white">{mod.title}</span>
-                          <span className="text-[11px] text-blue-400 font-medium px-2 py-0.5 bg-blue-500/10 rounded-full border border-blue-500/20">{mod.subtitle}</span>
-                        </div>
-                        <p className="text-xs text-gray-400 mb-2.5">{mod.description}</p>
-                        <ul className="space-y-1">
-                          {mod.highlights.map((item, hIdx) => (
-                            <li key={hIdx} className="text-[12px] text-gray-300 flex items-start gap-1.5">
-                              <span className="text-blue-400 mt-0.5">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Workflow Stages */}
-            {selectedProject.workflowStages && selectedProject.workflowStages.length > 0 && (
-              <div>
-                <h4 className="text-white font-semibold text-base mb-3">End-to-End Transaction Flow</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {selectedProject.workflowStages.map((stage) => (
-                    <div key={stage.stage} className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-lg p-3 flex gap-3 items-start">
-                      <div className="w-7 h-7 rounded-full bg-blue-500/20 border border-blue-400/40 text-blue-300 font-bold text-xs flex items-center justify-center shrink-0">
-                        {stage.stage}
-                      </div>
-                      <div>
-                        <h5 className="text-xs font-bold text-white mb-0.5">{stage.title}</h5>
-                        <p className="text-[11px] text-gray-300 leading-snug">{stage.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Tech Stack */}
-            <div>
-              <h4 className="text-white font-semibold text-sm mb-2">Technologies & Tools</h4>
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
+              {selectedProject.longDescription || selectedProject.description}
+            </p>
+            <div className="mb-6">
+              <h4 className="text-white font-semibold text-sm sm:text-base mb-2.5">Tech Stack</h4>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {selectedProject.techStack.map((tech) => (
                   <Tag key={tech}>{tech}</Tag>
                 ))}
               </div>
             </div>
-
-            {/* Actions */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               {selectedProject.liveUrl && (
                 <a
                   href={selectedProject.liveUrl}
